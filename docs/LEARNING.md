@@ -43,7 +43,7 @@ list.
 
 | Object | Notation in this repository | Role |
 |---|---|---|
-| Quantum state | $`\rho`$, or $`|\psi\rangle\langle\psi|`$ for a pure state | Input or retained output of the measurement |
+| Quantum state | $`\rho`$, or $`\lvert\psi\rangle\langle\psi\rvert`$ for a pure state | Input or retained output of the measurement |
 | Quantum channel | $`\mathcal E`$ | The instrument with its outcome ignored |
 | Instrument | $`\{\mathcal I_{\rm low},\mathcal I_{\rm high}\}`$ | Both the answer probabilities and conditional state changes |
 | Kraus operators | $`K_\alpha`$; $`K_s`$ for window outcomes | A representation of the physical state change |
@@ -51,10 +51,10 @@ list.
 | Additive charge | $`Q=\sum_j n_j`$ | The observable being thresholded; also its classical distribution label when stated explicitly |
 | Active block and background | $`A`$ and $`B`$ | The two sides of the causal condition |
 | Charge-sector projector | $`\Pi_q`$ | All states of total occupation q, including degeneracy |
-| Pointer state | $`|e_q\rangle`$ | Environmental record associated with a preserved charge state |
+| Pointer state | $`\lvert e_q\rangle`$ | Environmental record associated with a preserved charge state |
 | Classical and quantum entropy | $`H`$ and $`S`$ | Both measured in bits |
-| Trace distance | $`\tfrac12\|\rho-\sigma\|_1`$ | Retained-state error; the factor one-half is explicit |
-| Diamond norm | $`\|\Lambda-\Gamma\|_\diamond`$ | Full, unhalved channel difference including a reference |
+| Trace distance | $`\tfrac12\lVert\rho-\sigma\rVert_1`$ | Retained-state error; the factor one-half is explicit |
+| Diamond norm | $`\lVert\Lambda-\Gamma\rVert_\diamond`$ | Full, unhalved channel difference including a reference |
 
 Watrous writes the adjoint using a star in many places. This repository uses
 a dagger. The density-operator, Kraus, and dilation descriptions are the same
@@ -80,7 +80,7 @@ joint output is pure, the retained spins and the meter have equal entropy:
 S_{\rm out}=S\!\left(\sum_qp_q|e_q\rangle\langle e_q|\right).
 ```
 
-The new causal step changes the background charge while holding the active
+The causal comparison step changes the background charge while holding the active
 input fixed. A pair separated by at least g can be shifted onto opposite sides
 of the calibrated threshold. Their records must then be distinguishable.
 The nonsignalling condition transfers that constraint to the original

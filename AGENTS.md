@@ -29,6 +29,10 @@ Write the repository as a complete bounded scientific work. Keep research
 claims, tutorial explanations, and reproducibility evidence easy to navigate.
 Use GitHub-supported mathematical syntax: inline $`...`$ and fenced math blocks.
 Write named operators with supported roman notation such as `\mathrm{Tr}\,` and `\mathrm{Var}`.
+Use `\lt` for strict less-than comparisons in fenced math; literal `<` can
+interfere with GitHub's processing of otherwise valid formulas.
+In Markdown table formulas, use `\lvert`/`\rvert` or `\lVert`/`\rVert` instead
+of pipe characters, which the table parser can treat as cell separators.
 Do not introduce custom TeX macros. Inspect the actual hosting renderer for
 math-heavy changes; source checks alone cannot certify display quality.
 Keep private publication assessments and exploration transcripts out of the

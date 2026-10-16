@@ -308,7 +308,7 @@ For entropy decoding, a fair independent guess is always available. Define the c
 There is therefore a comparison decoder with error at most $`\zeta\le1/2`$ for every individual encoded charge. In the informative regime,
 
 ```math
-\arcsin\sqrt{\eta}+\arcsin\sqrt{\varepsilon}<\frac{\pi}{4},
+\arcsin\sqrt{\eta}+\arcsin\sqrt{\varepsilon}\lt \frac{\pi}{4},
 ```
 
 this becomes
@@ -384,7 +384,7 @@ Combining these equations proves the claim. The different comparisons are altern
 Remove zero-probability symbols and list the remaining probabilities in their prescribed order. Define
 
 ```math
-F_x=\sum_{y<x}p_y,
+F_x=\sum_{y\lt x}p_y,
 \qquad
 u_x=F_x+\frac{p_x}{2},
 \qquad
@@ -396,7 +396,7 @@ Use the first $`\ell_x`$ binary digits of $`u_x`$ as a codeword, choosing the te
 The code intervals are disjoint and occur in the specified order. They therefore form an alphabetic prefix code. Its binary trie has the symbols in that order, and every branch separates consecutive groups of symbols. Pruning any unary vertices produces an alphabetic binary tree with no larger depths. Its mean depth obeys
 
 ```math
-L\le\sum_xp_x\ell_x<H(p)+2.
+L\le\sum_xp_x\ell_x\lt H(p)+2.
 ```
 
 For a one-symbol alphabet, take the empty tree with $`L=0`$.

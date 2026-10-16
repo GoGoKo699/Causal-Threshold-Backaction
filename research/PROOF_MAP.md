@@ -50,7 +50,7 @@ baseline-state survival, not from an approximate scalar-Kraus assertion.
 | Survival-conditioned pointers and calibration | Provides alternative noisy threshold decoders on one encoded ensemble |
 | Serial information accounting | Converts decoder performance into pointer entropy |
 | Fourier-family entropy transfer | Converts pointer entropy into average retained-system entropy without an ambient-dimension penalty |
-| Exact-readout compression bound | Improves the coefficient when calibration error vanishes |
+| Exact-readout compression bound | Improves the coefficient when readout and nonsignalling are exact |
 | Continuity of Stinespring dilation | Extends decoder control to a full-diamond causality defect |
 
 The comparison decoders are alternative measurements used in an information

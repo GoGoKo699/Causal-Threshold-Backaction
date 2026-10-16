@@ -45,7 +45,7 @@ Here $`\ln`$ is the natural logarithm. With $`\gamma`$ denoting Euler's constant
 0\le C_g\le\frac{2(1-\gamma)}{\ln2}
   =1.2198977272\ldots,
 \qquad
-\delta_g<2.2198977273.
+\delta_g\lt 2.2198977273.
 ```
 
 For the exact admissible class in [MODEL.md](MODEL.md),
@@ -82,7 +82,7 @@ The theorem also implies an input-independent approximation guarantee for that a
 0\le
 S_{\mathrm{window}}(p)-\mathsf D_{N,a,g,m}(\psi)
 \le H(R)+\delta_g
-<3.2198977273.
+\lt 3.2198977273.
 ```
 
 ### Why coarse charge entropy appears
@@ -225,7 +225,7 @@ This bound comes from two facts. Nearby translated windows have a large common p
 There is a uniform consequence that includes the integer-rounding cases. If $`\sigma=0`$, the output is pure. If
 
 ```math
-0<r=\frac{\sigma}{g}\le\frac14,
+0\lt r=\frac{\sigma}{g}\le\frac14,
 ```
 
 then
