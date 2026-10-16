@@ -1,0 +1,57 @@
+# Causal Threshold Backaction
+
+> A causal ordered threshold detector that preserves charge sectors has a
+> pure-input entropy cost fixed, up to universal additive constants, by the
+> input's coarse-charge entropy. A finite distributed window instrument
+> supplies a matching upper bound; general-instrument bounds establish robustness.
+
+Repository: https://github.com/GoGoKo699/Causal-Threshold-Backaction
+Working title: The Backaction Cost of Causal Threshold Measurements
+Author and contact: Ruge Lin, gogoko699@gmail.com
+
+## Authoritative reading routes
+
+- [Overview](README.md): physical question, central result, and navigation.
+- [Model](research/MODEL.md): calibration, sector preservation, nonsignalling, pure inputs, and integer domain.
+- [Theorem](research/THEOREM.md): exact coarse-charge law, constants, and product-state corollaries.
+- [Proof map](research/PROOF_MAP.md): dependencies and locations of the complete arguments.
+- [Exact proofs](research/EXACT_PROOFS.md): scalar structure, causal comparison, lower bound, Fejér entropy bound, and broad-gap limit.
+- [Apparatus](research/APPARATUS.md): local probe protocol, all-record Kraus operators, conditional states, and classical collection.
+- [Robustness](research/ROBUSTNESS.md): general instruments, decoder errors, phase-average entropy transfer, exact readout, and approximate causality.
+- [Attribution](literature/ATTRIBUTION.md): primary sources and precise scope comparisons.
+- [Verification](VERIFICATION.md): commands, independent checks, and finite reference values.
+
+## Learning route
+
+- [Learning bridge](docs/LEARNING.md): one educational anchor, Watrous's The Theory of Quantum Information, and project notation.
+- [30 milestones](docs/MILESTONES.md): M01–M14 background/preliminaries; M15–M30 narrative/innovation; local-to-global within each phase.
+- [Worked examples](docs/WORKED_EXAMPLES.md): certain answers, pointer overlaps, records, and boundaries.
+- [Coaching protocol](docs/COACHING.md): use only for an explicitly requested tutorial; keep learner state separate from the settled map.
+
+## Questions this repository answers
+
+- Can a binary threshold with a certain answer create many bits of system entropy?
+- How do calibration, nondisturbance inside charge sectors, and one-way causality constrain measurement backaction?
+- Why does H(floor(Q/g)) determine the optimal exact pure-input cost up to constants?
+- Which finite distributed instrument realizes the triangular coherence kernel?
+- What changes when calibration or preservation is imperfect, and which bounds require averaging prepared phases?
+- How does this differ from parity measurements, gentle noisy counting, and previously known nonlocal meter architectures?
+
+Useful search phrases: causal threshold measurement; coarse-charge entropy;
+nonsignalling measurement backaction; sector-preserving quantum instrument;
+translated window meter; GHZ-like distributed measurement; Fejér kernel entropy;
+semicausal Stinespring dilation; quantum serial encoding; phase-average entropy.
+
+## Interpretation constraints
+
+All entropy is in bits. Exact preservation covers every state in every global
+charge sector. The result concerns initially pure inputs and the nonselective
+retained system. The global answer is available after classical collection.
+The cost is optimized over detectors for a fixed input, not a minimax quantity.
+The uniform errors are additive constants; they are not a sharp large-gap rate.
+General robust statements concern the specified phase average. Approximate
+causality is measured in full diamond norm. Numerical checks evaluate the
+explicit apparatus and identities, not the universal optimization problem.
+
+Read AGENTS.md before editing. Citation metadata is in CITATION.cff and
+references.bib. This guide helps discovery; it does not guarantee indexing.

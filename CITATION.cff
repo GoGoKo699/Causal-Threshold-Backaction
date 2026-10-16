@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite this repository when using its proofs, exposition, or verification code."
+title: "The Backaction Cost of Causal Threshold Measurements"
+type: software
+authors:
+  - family-names: Lin
+    given-names: Ruge
+    email: gogoko699@gmail.com
+repository-code: "https://github.com/GoGoKo699/Causal-Threshold-Backaction"
+url: "https://github.com/GoGoKo699/Causal-Threshold-Backaction"
+license: MIT
+abstract: >-
+  Research exposition, complete proofs, a finite distributed apparatus, and
+  reproducible calculations for the entropy cost of causal threshold measurements.
+  Under exact calibration and preservation of every charge sector, the optimal
+  pure-input cost is determined up to universal additive constants by coarse-charge
+  entropy. General-instrument results treat imperfect preservation, calibration,
+  and causality under explicit assumptions.
+keywords:
+  - quantum measurement
+  - causality
+  - entropy
+  - quantum information
+  - threshold measurement
