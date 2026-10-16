@@ -127,8 +127,9 @@ the separately proved vanishing limit. [Reproduction](../VERIFICATION.md).
 
 ## 5. Two exact boundaries
 
-For g=1, all distinct charge pointers are orthogonal. Every admissible exact
-instrument produces entropy exactly H(Q) on a pure charge superposition.
+For g=1 and the theorem's active-input family with vacuum spectators, all
+distinct supported charge pointers are orthogonal. Every admissible exact
+instrument therefore produces entropy exactly H(Q).
 For an equal superposition of M charge states spaced by g, the window pointers
 are also pairwise orthogonal and the entropy is exactly log₂M. Both examples
 give equality, beyond the general constant-accuracy statement.

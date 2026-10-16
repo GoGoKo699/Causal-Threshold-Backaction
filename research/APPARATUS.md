@@ -174,7 +174,7 @@ On such a state, the outcome distribution is $`s=q+Z`$, where $`Z`$ is uniform o
 \Pr({\rm high}\mid q)=
 \begin{cases}
 0,&q\leq a,\\
-(q-a)/g,&a<q<a+g,\\
+(q-a)/g,&a\lt q\lt a+g,\\
 1,&q\geq a+g.
 \end{cases}
 ```

@@ -708,7 +708,7 @@ Since the meter is a mixture of pure pointers, $`S_{\mathrm{window}}(p)\le H(Q_{
 If $`\sigma=0`$, the charge and pointer are deterministic, and the entropy is zero. Otherwise set
 
 ```math
-r=\frac{\sigma}{g},\qquad 0<r\le\frac14.
+r=\frac{\sigma}{g},\qquad 0\lt r\le\frac14.
 ```
 
 If $`\sigma g\ge1`$, choose
@@ -751,7 +751,7 @@ S_{\mathrm{window}}(p)
 \le
 b(4\sqrt r)+4\sqrt r
 +h_2(\sqrt r)+C_0\sqrt r,
-\qquad 0<r\le1/4.
+\qquad 0\lt r\le1/4.
 }
 ```
 

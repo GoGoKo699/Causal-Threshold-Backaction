@@ -6,7 +6,7 @@
 > supplies a matching upper bound; general-instrument bounds establish robustness.
 
 Repository: https://github.com/GoGoKo699/Causal-Threshold-Backaction
-Working title: The Backaction Cost of Causal Threshold Measurements
+Title: The Backaction Cost of Causal Threshold Measurements
 Author and contact: Ruge Lin, gogoko699@gmail.com
 
 ## Authoritative reading routes

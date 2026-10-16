@@ -36,6 +36,15 @@ def main() -> None:
         fences = re.findall(r"^```", text, flags=re.MULTILINE)
         if len(fences) % 2:
             errors.append(f"{path.relative_to(ROOT)}: unmatched fenced block")
+        math_blocks = re.findall(r"^[ \t]*```math[ \t]*\n(.*?)^[ \t]*```[ \t]*$", text,
+                                 flags=re.MULTILINE | re.DOTALL)
+        if any("<" in block for block in math_blocks):
+            errors.append(f"{path.relative_to(ROOT)}: use \\lt instead of literal < in fenced math")
+        for line in text.splitlines():
+            if line.lstrip().startswith("|"):
+                formulas = re.findall(r"\$`(.*?)`\$", line)
+                if any("|" in formula for formula in formulas):
+                    errors.append(f"{path.relative_to(ROOT)}: use named vertical delimiters in table math")
     milestones = ROOT / "docs" / "MILESTONES.md"
     if milestones.exists():
         found = re.findall(r"^### (M\d{2})\b", milestones.read_text(), flags=re.MULTILINE)
