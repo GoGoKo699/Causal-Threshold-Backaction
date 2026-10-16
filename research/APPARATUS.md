@@ -213,9 +213,9 @@ Since
 this is a mixture of product unitaries with shared classical randomness. For any partition into systems $`A`$ and $`B`$, with corresponding charges $`Q_A`$ and $`Q_B`$,
 
 ```math
-\operatorname{Tr}_B\mathcal E(\rho_{AB})
+\mathrm{Tr}_B\,\mathcal E(\rho_{AB})
 =\sum_k|\alpha_k|^2\omega^{kQ_A}
-       \bigl(\operatorname{Tr}_B\rho_{AB}\bigr)\omega^{-kQ_A}.
+       \bigl(\mathrm{Tr}_B\,\rho_{AB}\bigr)\omega^{-kQ_A}.
 ```
 
 The marginal depends only on the input marginal on $`A`$. The same argument works with reference systems, and with either side of every partition. The nonselective channel is exactly nonsignalling.

@@ -30,7 +30,7 @@ def main() -> None:
                 links += 1
                 if not (path.parent / relative).exists():
                     errors.append(f"{path.relative_to(ROOT)}: missing target {relative}")
-        for forbidden in [r"\newcommand", r"\renewcommand", "sandbox:", "/workspace/scratch/"]:
+        for forbidden in [r"\newcommand", r"\renewcommand", r"\operatorname", "sandbox:", "/workspace/scratch/"]:
             if forbidden in text:
                 errors.append(f"{path.relative_to(ROOT)}: nonportable content {forbidden}")
         fences = re.findall(r"^```", text, flags=re.MULTILINE)

@@ -83,7 +83,7 @@ The entropy is unchanged by a common charge phase. More generally, its expressio
 Let $`A`$ contain $`m`$ spins and $`B`$ contain $`N-m`$ spins. Take normalized charge vectors $`|a_q\rangle_A`$ and $`|a_r\rangle_A`$, with $`0\le q,r\le m`$. For any spectator basis state $`|b\rangle_B`$ of charge $`b`$, the scalar-Kraus form gives
 
 ```math
-\operatorname{Tr}_{B_{\mathrm{out}}}
+\mathrm{Tr}_{B_{\mathrm{out}}}\,
 \mathcal E\!\left(
 |a_q\rangle\langle a_r|\otimes|b\rangle\langle b|
 \right)
@@ -437,7 +437,7 @@ The product input on $`m`$ active spins expands as
 \sqrt{2^{-m}\binom mq}\,|D_q^{(m)}\rangle.
 ```
 
-Hence $`Q_{\mathrm{in}}\sim\operatorname{Bin}(m,\tfrac12)`$. Section 3 gives
+Hence $`Q_{\mathrm{in}}\sim\mathrm{Bin}(m,\tfrac12)`$. Section 3 gives
 
 ```math
 S_{\mathrm{out}}
@@ -492,7 +492,7 @@ The last inequality is $`1+r\le2\max\{1,r\}`$. The case $`m=0`$ has zero cost di
 
 ### 7.2 A uniform upper bound from the variance
 
-Let $`Y=Q_{\mathrm{in}}+Z`$ and add independent $`U\sim\operatorname{Unif}[-1/2,1/2]`$. The unit intervals associated with distinct integer values of $`Y`$ have disjoint interiors. Therefore
+Let $`Y=Q_{\mathrm{in}}+Z`$ and add independent $`U\sim\mathrm{Unif}[-1/2,1/2]`$. The unit intervals associated with distinct integer values of $`Y`$ have disjoint interiors. Therefore
 
 ```math
 h(Y+U)=H(Y).
@@ -501,7 +501,7 @@ h(Y+U)=H(Y).
 For any finite-variance integer charge distribution with variance $`\sigma^2`$,
 
 ```math
-\operatorname{Var}(Y+U)
+\mathrm{Var}(Y+U)
 =\sigma^2+\frac{g^2-1}{12}+\frac1{12}
 =\sigma^2+\frac{g^2}{12}.
 ```

@@ -175,7 +175,7 @@ A stronger lower bound, useful at finite $`m`$, is
 \ge
 \max\left\{
 0,\,
-H\!\left(\operatorname{Bin}(m,\tfrac12)\right)-\log_2g
+H\!\left(\mathrm{Bin}(m,\tfrac12)\right)-\log_2g
 \right\}.
 ```
 
@@ -200,7 +200,7 @@ The stronger statement that the cost tends to zero for $`g/\sqrt m\to\infty`$ fo
 The window apparatus also admits a variance-based estimate for any finite integer-valued charge distribution. Let
 
 ```math
-\sigma^2=\operatorname{Var}(Q_{\mathrm{in}}),\qquad
+\sigma^2=\mathrm{Var}(Q_{\mathrm{in}}),\qquad
 C_0=1+\frac{2(1-\gamma)}{\ln2}.
 ```
 

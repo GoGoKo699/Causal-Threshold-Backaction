@@ -60,7 +60,7 @@ silently interpreted as a probability.
 ## Reference entropy values
 
 All entries are bits. The lower bound is
-$`\max\{0,H(\operatorname{Bin}(m,1/2))-\log_2g\}`$. The upper bound is
+$`\max\{0,H(\mathrm{Bin}(m,1/2))-\log_2g\}`$. The upper bound is
 
 ```math
 \frac12\log_2\!\left[2\pi e\left(\frac{m}{4g^2}+\frac1{12}\right)\right]+C_g.

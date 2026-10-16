@@ -84,7 +84,7 @@ bound. [Complete derivation](research/EXACT_PROOFS.md).
 ## Product states already exhibit the cost
 
 For $`|+\rangle^{\otimes m}|0\rangle^{\otimes(N-m)}`$, the charge distribution
-is $`\operatorname{Bin}(m,1/2)`$. Writing $`\mathsf B(m,g)`$ for the optimum at
+is $`\mathrm{Bin}(m,1/2)`$. Writing $`\mathsf B(m,g)`$ for the optimum at
 the same feasible ambient parameters,
 
 ```math

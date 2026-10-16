@@ -38,9 +38,9 @@ The instrument is exactly calibrated if, for every density operator supported in
 
 ```math
 \begin{aligned}
-\operatorname{Tr}\mathcal I_0(\rho)&=1
+\mathrm{Tr}\,\mathcal I_0(\rho)&=1
 &&\text{when }\rho=\Pi_q\rho\Pi_q,\quad q\le a,\\
-\operatorname{Tr}\mathcal I_1(\rho)&=1
+\mathrm{Tr}\,\mathcal I_1(\rho)&=1
 &&\text{when }\rho=\Pi_q\rho\Pi_q,\quad q\ge a+g.
 \end{aligned}
 ```
@@ -81,8 +81,8 @@ Partition the qubits into a block $`A`$ of $`m`$ spins and a spectator block $`B
 Nonsignalling from $`B`$ to $`A`$ means that there is a channel $`\mathcal E_A`$ such that
 
 ```math
-\operatorname{Tr}_{B_{\mathrm{out}}}\mathcal E(\rho_{AB})
-  =\mathcal E_A\!\left(\operatorname{Tr}_{B}\rho_{AB}\right)
+\mathrm{Tr}_{B_{\mathrm{out}}}\,\mathcal E(\rho_{AB})
+  =\mathcal E_A\!\left(\mathrm{Tr}_{B}\,\rho_{AB}\right)
 \quad\text{for every density operator }\rho_{AB}.
 ```
 
@@ -121,7 +121,7 @@ S_{\mathrm{out}}(\mathcal I,\Psi)
 The input entropy is zero, so this is also its entropy increase. All von Neumann and Shannon entropies are measured in bits:
 
 ```math
-S(\rho)=-\operatorname{Tr}\rho\log_2\rho,\qquad
+S(\rho)=-\mathrm{Tr}\,\rho\log_2\rho,\qquad
 H(p)=-\sum_qp_q\log_2p_q.
 ```
 

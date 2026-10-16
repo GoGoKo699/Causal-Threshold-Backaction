@@ -66,9 +66,9 @@ Fix $`0\le\eta\le1/2`$. Calibration means that, for every density operator suppo
 
 ```math
 \begin{aligned}
-\operatorname{tr}\mathcal I_1(\rho)&\le\eta
+\mathrm{tr}\,\mathcal I_1(\rho)&\le\eta
 &&\text{if }\rho=\Pi_q\rho\Pi_q,\quad q\le a,\\
-\operatorname{tr}\mathcal I_0(\rho)&\le\eta
+\mathrm{tr}\,\mathcal I_0(\rho)&\le\eta
 &&\text{if }\rho=\Pi_q\rho\Pi_q,\quad q\ge a+g.
 \end{aligned}
 ```
@@ -107,9 +107,9 @@ Thus the theorem applies under uniform approximate sector preservation, while re
 For the exact-causality results, assume that the reduced output on $`A`$ is independent of the input on $`B`$: there is a channel $`\mathcal T_A`$ such that
 
 ```math
-\operatorname{tr}_{B_{\mathrm{out}}}\mathcal E
+\mathrm{tr}_{B_{\mathrm{out}}}\,\mathcal E
 =
-\mathcal T_A\circ\operatorname{tr}_{B_{\mathrm{in}}}.
+\mathcal T_A\circ\mathrm{tr}_{B_{\mathrm{in}}}.
 ```
 
 This is equality of channels, including on inputs correlated with a reference system. Only this direction of nonsignalling across the chosen cut is used. A channel that is nonsignalling across every bipartition satisfies this assumption.
@@ -131,15 +131,15 @@ V:\mathcal H_A\otimes\mathcal H_B
 such that
 
 ```math
-\mathcal E(\rho)=\operatorname{tr}_E V\rho V^\dagger.
+\mathcal E(\rho)=\mathrm{tr}_E\,V\rho V^\dagger.
 ```
 
 The environment can include an orthogonal record of the instrument outcome. Thus there are orthogonal projectors $`P_0,P_1`$ on $`E`$, summing to the identity, for which
 
 ```math
-\operatorname{tr}\mathcal I_y(\rho)
+\mathrm{tr}\,\mathcal I_y(\rho)
 =
-\operatorname{tr}\!\left[
+\mathrm{tr}\!\left[
 (I_{A_{\mathrm{out}}B_{\mathrm{out}}}\otimes P_y)
 V\rho V^\dagger
 \right].
@@ -218,7 +218,7 @@ V(|\varphi\rangle_A|\beta_b\rangle_B).
 Each $`V_b`$ is an isometry from $`A`$ into $`A_{\mathrm{out}}\otimes\mathcal K`$. By nonsignalling,
 
 ```math
-\operatorname{tr}_{\mathcal K}V_b\rho_A V_b^\dagger
+\mathrm{tr}_{\mathcal K}\,V_b\rho_A V_b^\dagger
 =
 \mathcal T_A(\rho_A)
 ```
@@ -697,7 +697,7 @@ Then the Fourier family consists entirely of product states:
 Every component charge lies below or at $`a`$. With
 
 ```math
-H_m=H(\operatorname{Bin}(m,1/2)),
+H_m=H(\mathrm{Bin}(m,1/2)),
 ```
 
 the bound becomes
@@ -811,7 +811,7 @@ G\le D_r^{-1}\le\frac{I}{1-\varepsilon}.
 
 ### 9.3 Weighted Gram entropy
 
-Let $`p`$ now denote the conditional prior in this residue, after removing its zero-probability entries, and let $`P=\operatorname{diag}(p)`$. The weighted Gram matrix
+Let $`p`$ now denote the conditional prior in this residue, after removing its zero-probability entries, and let $`P=\mathrm{diag}(p)`$. The weighted Gram matrix
 
 ```math
 B=P^{1/2}GP^{1/2}
@@ -832,7 +832,7 @@ S(B)\ge H(p)+\log_2(1-\varepsilon).
 For a possibly singular $`B`$, apply monotonicity to $`B+tI`$ and $`P/(1-\varepsilon)+tI`$, multiply by $`B`$, take the trace, and then let $`t\downarrow0`$. The diagonal identity $`B_{qq}=p_q`$ gives
 
 ```math
-\operatorname{tr}B\log_2B
+\mathrm{tr}\,B\log_2B
 \le
 \sum_qp_q\log_2p_q-\log_2(1-\varepsilon).
 ```
@@ -910,7 +910,7 @@ Define the induced reduced channels on the whole active input space by
 ```math
 \Lambda_b(\rho_A)
 =
-\operatorname{tr}_{B_{\mathrm{out}}}
+\mathrm{tr}_{B_{\mathrm{out}}}\,
 \mathcal E\!\left(
 \rho_A\otimes|\beta_b\rangle\langle\beta_b|
 \right).
@@ -944,9 +944,9 @@ If a full reduced-channel causality estimate is supplied instead,
 
 ```math
 \left\|
-\operatorname{tr}_{B_{\mathrm{out}}}\mathcal E
+\mathrm{tr}_{B_{\mathrm{out}}}\,\mathcal E
 -
-\mathcal T_A\circ\operatorname{tr}_{B_{\mathrm{in}}}
+\mathcal T_A\circ\mathrm{tr}_{B_{\mathrm{in}}}
 \right\|_\diamond
 \le\delta,
 ```
@@ -1050,10 +1050,10 @@ All the baseline charges satisfy $`q\le m\le a`$. Averaging the actual displayed
 
 ```math
 \frac1d\sum_k
-\operatorname{tr}\mathcal I_1(|\psi_k\rangle\langle\psi_k|)
+\mathrm{tr}\,\mathcal I_1(|\psi_k\rangle\langle\psi_k|)
 =
 \sum_qp_q
-\operatorname{tr}\mathcal I_1(|\chi_q\rangle\langle\chi_q|)
+\mathrm{tr}\,\mathcal I_1(|\chi_q\rangle\langle\chi_q|)
 \le\eta.
 ```
 
@@ -1074,7 +1074,7 @@ At $`\eta=0`$, let $`F_1=\mathcal I_1^*(I)`$ be the positive effect for result h
 Positivity implies $`F_1^{1/2}|\chi_q\rangle=0`$, hence $`F_1|\chi_q\rangle=0`$. It therefore annihilates their whole span, and
 
 ```math
-\operatorname{tr}\mathcal I_1(|\psi_k\rangle\langle\psi_k|)=0
+\mathrm{tr}\,\mathcal I_1(|\psi_k\rangle\langle\psi_k|)=0
 \qquad\text{for every }k.
 ```
 
