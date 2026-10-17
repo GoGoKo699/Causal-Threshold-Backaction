@@ -2,7 +2,7 @@
 
 This note gives an exact implementation of the complete instrument using an entangled probe prepared in advance, local system–probe interactions, local readouts, and subsequent classical communication. The global answer is available only after the records have reached a common future location. No quantum system needs to be reunited after the local interactions.
 
-The distributed-meter architecture has established antecedents in [Beckman et al., Section II](https://arxiv.org/pdf/quant-ph/0102043) and [Vidil–Edamatsu, Section III](https://arxiv.org/pdf/2103.00443). The present construction adapts that architecture to a finite cyclic register and a bounded window of additive-charge outcomes. The [attribution note](../literature/ATTRIBUTION.md) separates these ingredients from the entropy necessity and attainability claims.
+The distributed-meter architecture has established antecedents in [Beckman et al., Section II](https://arxiv.org/pdf/quant-ph/0102043) and [Vidil–Edamatsu, Section III](https://arxiv.org/pdf/2103.00443). The present construction adapts that architecture to a finite cyclic register and a bounded window of additive-charge outcomes. The [attribution note](../references/RELATED_WORK.md) separates these ingredients from the entropy necessity and attainability claims.
 
 ## 1. Target instrument and conventions
 
@@ -309,4 +309,4 @@ The raw classical transcript contains $`Nt`$ bits; its redundancy at fixed $`s`$
 - Distinguish local completion of the interaction from later availability of the global classical answer.
 - Keep the independent transcript randomness separate from the system entropy.
 
-Bibliographic records are in [references.bib](../references.bib).
+Bibliographic records are in [references.bib](../references/references.bib).

@@ -2,7 +2,21 @@
 
 The question is how much entropy an ordered charge measurement must create when its nonselective channel cannot transmit a signal from a spectator block to an observed block. The displayed answer is one bit. The measurement must also preserve every state within a fixed charge sector.
 
-The exact result concerns the entropy of a pure input after the outcome is ignored. Its scale is the Shannon entropy of the input charge grouped into bins of the detector's transition width. The [theorem](THEOREM.md) gives dimension-independent additive bounds, and [the proofs](EXACT_PROOFS.md) establish them.
+The exact result concerns the entropy of a pure input after the outcome is ignored. Its scale is the Shannon entropy of the input charge grouped into bins of the detector's transition width. The [entropy law](entropy_law.md) gives dimension-independent additive bounds.
+
+## Scientific reading route
+
+This page fixes the common model and conventions. Read the [exact claims](entropy_law.md),
+then the [causal converse](causal_converse.md) and [window entropy bound](window_entropy.md)
+for necessity and attainability. The [distributed apparatus](distributed_apparatus.md)
+derives the full instrument at separated sites. [Fluctuation regimes](fluctuation_regimes.md)
+specializes the law to product inputs and proves the broad-resolution limit.
+[Robustness](robustness.md) treats general imperfect instruments under its stated
+operational assumptions. The [physical interpretation](interpretation.md) joins
+these conclusions and explains the parity comparison.
+
+Use the [proof map](proof_map.md) for individual argument dependencies and the
+[Watrous bridge](../learning/WATROUS_BRIDGE.md) for the conceptual route into them.
 
 ## System and charge
 
@@ -68,7 +82,7 @@ K_{y,\alpha}=f_{y,\alpha}(Q)
   =\sum_{q=0}^{N}f_{y,\alpha}(q)\Pi_q.
 ```
 
-This scalar form is derived from the preservation assumption; it is not an additional restriction on the instrument. A pure state that is fixed by a channel must be mapped to a collinear vector by each Kraus operator. Linearity then makes that scalar the same throughout a sector. See [the scalar-Kraus proof](EXACT_PROOFS.md#1-exact-sector-preservation-forces-scalar-kraus-operators).
+This scalar form is derived from the preservation assumption; it is not an additional restriction on the instrument. A pure state that is fixed by a channel must be mapped to a collinear vector by each Kraus operator. Linearity then makes that scalar the same throughout a sector. See [the scalar-Kraus proof](causal_converse.md#1-exact-sector-preservation-forces-scalar-kraus-operators).
 
 ## The cut and the nonsignalling condition
 
@@ -88,7 +102,7 @@ Nonsignalling from $`B`$ to $`A`$ means that there is a channel $`\mathcal E_A`$
 
 This is a condition on the nonselective channel. The displayed outcome can subsequently be collected and compared. The theorem does not require the conditional channel associated with a particular outcome to be nonsignalling.
 
-Only this fixed direction across this fixed cut is needed for the lower bound. Requiring nonsignalling across all bipartitions is a sufficient stronger assumption. The [translated-window construction](APPARATUS.md) satisfies the stronger condition.
+Only this fixed direction across this fixed cut is needed for the lower bound. Requiring nonsignalling across all bipartitions is a sufficient stronger assumption. The [translated-window construction](distributed_apparatus.md) satisfies the stronger condition.
 
 The restriction on $`m`$ has two concrete purposes:
 
@@ -181,4 +195,4 @@ The exact optimal-cost theorem concerns pure inputs and exact assumptions. A mix
 
 The universal bounds are additive in bits. Their binomial specialization determines the logarithmic cost when the charge spread exceeds the transition width. A separate estimate proves that the translated-window cost vanishes in the opposite limit; its rate is an upper bound, not a claimed optimal asymptotic equivalent.
 
-For approximate calibration, preservation, or causality assumptions, see [robustness](ROBUSTNESS.md). Standard mathematical ingredients and the relationship to existing measurement results are recorded in [attribution and literature](../literature/ATTRIBUTION.md).
+For approximate calibration, preservation, or causality assumptions, see [robustness](robustness.md). Standard mathematical ingredients and the relationship to existing measurement results are recorded in [attribution and literature](../references/RELATED_WORK.md).

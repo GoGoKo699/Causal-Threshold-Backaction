@@ -1,4 +1,4 @@
-# A learning route into causal threshold backaction
+# From Watrous to causal threshold backaction
 
 A measurement of many separated spins may report only whether their total
 occupation lies above a threshold. Suppose a pure input is certain to produce
@@ -10,9 +10,21 @@ an explicit distributed apparatus nearly minimizes that cost.
 
 Start with the [30-milestone map](MILESTONES.md), then the
 [worked examples](WORKED_EXAMPLES.md). The map has 14 background milestones and
-16 narrative milestones. It is fixed by the project, not by an assessment of a
-particular learner. Specialists can go directly to the
-[theorem](../research/THEOREM.md) and [proof map](../research/PROOF_MAP.md).
+16 narrative milestones, ordered by the scientific dependencies of the project.
+Specialists can go directly to the
+[theorem](../science/entropy_law.md) and [proof map](../science/proof_map.md).
+
+## Route through the project
+
+| Stage | Milestones | Scientific connection | Direct reading |
+|---|---|---|---|
+| States, instruments, and information | M01–M07 | Local quantum objects lead to sector preservation, pointer records, and system entropy. | [Model](../science/model.md) and [causal converse](../science/causal_converse.md) |
+| Conditions and the complete task | M08–M14 | Charge uncertainty, calibration, causality, and errors define the operational claim. | [Model](../science/model.md) and [robust assumptions](../science/robustness.md) |
+| Universal necessity | M15–M17 | Background shifts force separated pointers and a coarse-charge entropy cost. | [Causal converse](../science/causal_converse.md) |
+| Attaining apparatus | M18–M22 | Finite windows and distributed readout supply a uniform upper bound matching the converse. | [Window entropy](../science/window_entropy.md), [apparatus](../science/distributed_apparatus.md), and [entropy law](../science/entropy_law.md) |
+| Product inputs and wide resolution | M23–M24 | Binomial fluctuations give the product law; concentration controls the vanishing limit. | [Fluctuation regimes](../science/fluctuation_regimes.md) |
+| Robust instruments | M25–M27 | Survival, noisy decoders, and phase averages extend the argument beyond exact preservation. | [Robustness](../science/robustness.md) |
+| Scope and synthesis | M28–M30 | Boundaries, prior work, and verification connect the theorem to its physical interpretation. | [Interpretation](../science/interpretation.md), [related work](../references/RELATED_WORK.md), and [verification](../verification/README.md) |
 
 ## One educational anchor
 
@@ -27,17 +39,16 @@ manuscript is linked rather than redistributed.
 
 | Read selectively | What it supplies here | Project bridge |
 |---|---|---|
-| [Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf), §§2.1–2.3 | States, registers, channels, representations, and measurements | M01–M07; sector preservation and charge-dependent pointers |
-| [Chapter 3](https://cs.uwaterloo.ca/~watrous/TQI/TQI.3.pdf), §§3.1–3.3 | Distinguishability, fidelity, and channel distance with auxiliary systems | M12 and M25–M27; calibration and preservation errors |
-| [Chapter 5](https://cs.uwaterloo.ca/~watrous/TQI/TQI.5.pdf), §§5.1–5.2 | Classical and quantum entropy and their inequalities | M08–M09 and M17–M27; mixture bounds and entropy transfer |
+| [Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf), §§2.1–2.3 | States, registers, channels, representations, and measurements | M01–M07; [sector preservation and charge-dependent pointers](../science/causal_converse.md) |
+| [Chapter 3](https://cs.uwaterloo.ca/~watrous/TQI/TQI.3.pdf), §§3.1–3.3 | Distinguishability, fidelity, and channel distance with auxiliary systems | M12 and M25–M27; [calibration, survival, and channel-error conventions](../science/robustness.md) |
+| [Chapter 5](https://cs.uwaterloo.ca/~watrous/TQI/TQI.5.pdf), §§5.1–5.2 | Classical and quantum entropy and their inequalities | M08–M09 and M17–M27; [coarse-bin bounds](../science/causal_converse.md), [window entropy](../science/window_entropy.md), and [robust entropy transfer](../science/robustness.md) |
 
 The locally supplied material explains threshold calibration, causal background
 shifts, translated windows, and the final entropy law. Research-level imported
 ingredients, including the split-memory uncertainty relation and Stinespring
-continuity, are identified in the [robustness proof](../research/ROBUSTNESS.md)
-and [attribution map](../literature/ATTRIBUTION.md). These citations support the
-research; they do not add educational anchors or turn the route into a reading
-list.
+continuity, are identified in the [robustness proof](../science/robustness.md)
+and [attribution map](../references/RELATED_WORK.md). These citations support the
+research ingredients; Watrous remains the single educational anchor.
 
 ## Notation bridge
 
@@ -87,10 +98,12 @@ The nonsignalling condition transfers that constraint to the original
 background. This remains true when the actual input occupies only the low
 region and its displayed answer is certain.
 
-Grouping the resulting pointer constraints by charge bins gives the entropy
-converse. Translated windows provide a matching construction, and the phase
-measurement argument bounds its entropy uniformly. These steps are developed
-in M15–M22 and proved in [EXACT_PROOFS](../research/EXACT_PROOFS.md).
+Grouping the resulting pointer constraints by charge bins gives the
+[entropy converse](../science/causal_converse.md). The
+[distributed apparatus](../science/distributed_apparatus.md) realizes translated
+windows, and the [Fourier entropy argument](../science/window_entropy.md)
+bounds their entropy uniformly. M15–M22 connect these steps to the
+[matching entropy law](../science/entropy_law.md).
 
 ## A small example before the full proof
 
@@ -112,14 +125,11 @@ $`(3-\sqrt5)/8`$. Their entropy exceeds one bit even though the displayed answer
 has zero entropy. [WORKED_EXAMPLES](WORKED_EXAMPLES.md) follows the preparation,
 coherences, and records in detail and connects them to the general bound.
 
-## Continuing in chat
+## Proofs and calculations
 
-For an interactive tutorial, ask to begin at M01 or name the next uncompleted
-milestone. The [coaching protocol](COACHING.md) specifies Revise → Learn → Test,
-four-option selection questions, and the bounded retry rules. A maintenance
-request does not launch this course or award any passes.
-
-For a specialist reading session, follow [MODEL](../research/MODEL.md) →
-[THEOREM](../research/THEOREM.md) → [PROOF_MAP](../research/PROOF_MAP.md).
-For numerical inspection, use [VERIFICATION](../VERIFICATION.md). All three
-routes use the same assumptions and constants.
+For the complete assumptions and statements, follow the [model](../science/model.md),
+[entropy law](../science/entropy_law.md), and [proof map](../science/proof_map.md).
+The [worked examples](WORKED_EXAMPLES.md) connect these statements to explicit
+states and records. [Verification](../verification/README.md) provides the
+reproducible calculations and their limits. These routes use the same
+assumptions and constants.

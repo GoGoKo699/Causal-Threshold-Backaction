@@ -2,7 +2,7 @@
 
 An exactly calibrated ordered threshold, combined with preservation of every charge-sector state and a nonsignalling nonselective channel, has an entropy cost determined by the input's coarse charge uncertainty. A single translated-window detector attains that cost within a universal additive constant.
 
-The [model](MODEL.md) defines the instrument class, the direction of nonsignalling, and the entropy being minimized. [Complete proofs](EXACT_PROOFS.md) are provided separately.
+The [model](model.md) defines the instrument class, the direction of nonsignalling, and the entropy being minimized. [Complete proofs](proof_map.md) are provided separately.
 
 ## Universal theorem for an arbitrary pure input
 
@@ -48,7 +48,7 @@ Here $`\ln`$ is the natural logarithm. With $`\gamma`$ denoting Euler's constant
 \delta_g\lt 2.2198977273.
 ```
 
-For the exact admissible class in [MODEL.md](MODEL.md),
+For the exact admissible class in [model](model.md),
 
 ```math
 \boxed{
@@ -74,7 +74,7 @@ H(J)+2.2198977273.
 }
 ```
 
-The window detector is the same apparatus for every input distribution and every set of within-sector vectors. It preserves all charge-sector states and is nonsignalling across all bipartitions. Its construction is given in [APPARATUS.md](APPARATUS.md).
+The window detector is the same apparatus for every input distribution and every set of within-sector vectors. It preserves all charge-sector states and is nonsignalling across all bipartitions. Its construction is given in [distributed apparatus](distributed_apparatus.md).
 
 The theorem also implies an input-independent approximation guarantee for that apparatus:
 
@@ -179,7 +179,7 @@ H\!\left(\mathrm{Bin}(m,\tfrac12)\right)-\log_2g
 \right\}.
 ```
 
-The lower bound follows by conditioning on charge modulo $`g`$. The upper bound uses an exact Fourier entropy integral for the translated window and the variance of the binomial distribution. See [the product-corollary proof](EXACT_PROOFS.md#7-the-binomial-product-corollary).
+The lower bound follows by conditioning on charge modulo $`g`$. The upper bound uses an exact Fourier entropy integral for the translated window and the variance of the binomial distribution. See [the product-corollary proof](fluctuation_regimes.md#1-the-binomial-product-corollary).
 
 The entire product input is in $`Q\le m\le a`$. Exact calibration therefore displays the low result with probability one. An ideal global Lüders measurement of the low-versus-high threshold would leave this input unchanged.
 
@@ -249,7 +249,7 @@ S_{\mathrm{window}}(p)\longrightarrow0.
 
 For the binomial product input, $`\sigma=\sqrt m/2`$. Thus its optimal admissible cost tends to zero when $`g/\sqrt m\to\infty`$. The displayed rate is an upper bound; no optimal vanishing rate is asserted.
 
-The [common-core and centered-bin proof](EXACT_PROOFS.md#8-a-common-core-bound-for-nearby-windows) contains the exact integer conditions and the case where $`\sqrt{\sigma g}<1`$.
+The [common-core and centered-bin proof](fluctuation_regimes.md#2-a-common-core-bound-for-nearby-windows) contains the exact integer conditions and the case where $`\sqrt{\sigma g}<1`$.
 
 ## Parity provides a useful comparison
 
@@ -272,6 +272,6 @@ Parity asks whether the charge is even or odd; the theorem asks whether an order
 
 ## Scope and supporting material
 
-The theorem assumes exact preservation, exact calibration, and exact nonsignalling. Approximate versions and their conventions are developed in [ROBUSTNESS.md](ROBUSTNESS.md).
+The theorem assumes exact preservation, exact calibration, and exact nonsignalling. Approximate versions and their conventions are developed in [robustness](robustness.md).
 
-The result is an additive characterization of the optimal entropy for pure inputs. It does not identify a multiplicative law in the regime where the entropy tends to zero. The [apparatus](APPARATUS.md), [complete proofs](EXACT_PROOFS.md), and [attribution](../literature/ATTRIBUTION.md) give the construction, derivations, and literature context.
+The result is an additive characterization of the optimal entropy for pure inputs. It does not identify a multiplicative law in the regime where the entropy tends to zero. The [causal converse](causal_converse.md), [window entropy bound](window_entropy.md), and [fluctuation analysis](fluctuation_regimes.md) give the complete exact derivations. The [apparatus](distributed_apparatus.md) supplies their physical implementation, and the [interpretation](interpretation.md) connects the results to their [literature context](../references/RELATED_WORK.md).

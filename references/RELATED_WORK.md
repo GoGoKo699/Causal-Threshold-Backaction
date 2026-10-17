@@ -1,12 +1,12 @@
 # Attribution and scope of the contribution
 
-This note identifies the closest primary sources and the established mathematical ingredients of the results. The comparisons refer to the specific papers and passages listed below. Source details were checked on 16 October 2026. Full bibliographic entries are in [references.bib](../references.bib).
+This note identifies the closest primary sources and the established mathematical ingredients of the results. The comparisons refer to the specific papers and passages listed below. Source details were checked on 16 October 2026. Full bibliographic entries are in [references.bib](references.bib).
 
 ## 1. Universal entropy necessity and attainability
 
 The exact theorem concerns an ordered threshold for the additive charge $`Q=\sum_jn_j`$. Calibration is exact on every state with $`q\leq a`$ or $`q\geq a+g`$. The nonselective channel preserves every state in every global charge sector, including all degeneracies, and is nonsignalling from the spectator block $`B`$ to the active block $`A`$.
 
-For any pure input in the [model's](../research/MODEL.md) family, let $`p`$ be its charge distribution and let $`J=\lfloor Q_{\mathrm{in}}/g\rfloor`$. With $`\mathsf D`$ denoting the infimum of output entropy over all admissible instruments for that fixed input, the [arbitrary-prior theorem](../research/THEOREM.md) gives
+For any pure input in the [model's](../science/model.md) family, let $`p`$ be its charge distribution and let $`J=\lfloor Q_{\mathrm{in}}/g\rfloor`$. With $`\mathsf D`$ denoting the infimum of output entropy over all admissible instruments for that fixed input, the [arbitrary-prior theorem](../science/entropy_law.md) gives
 
 ```math
 H(J)-1
@@ -32,7 +32,7 @@ For $`|+\rangle^{\otimes m}`$ the charge prior is binomial. Its product-state co
 
 The placement conditions $`m\leq\min(a,N-a)`$ and $`a+g\leq N`$ ensure that the input is wholly in the low region and that the spectator shifts used by the converse exist. The theorem does not remove these conditions at endpoint thresholds.
 
-The separate [robust results](../research/ROBUSTNESS.md) allow general instruments. Their preservation input is the stated survival condition on baseline states; they do not require approximate preservation of every global charge-sector state or assume scalar Kraus operators. The results retain their explicitly stated calibration and exact or approximate nonsignalling conditions.
+The separate [robust results](../science/robustness.md) allow general instruments. Their preservation input is the stated survival condition on baseline states; they do not require approximate preservation of every global charge-sector state or assume scalar Kraus operators. The results retain their explicitly stated calibration and exact or approximate nonsignalling conditions.
 
 The entropy in this statement is the system's nonselective output entropy for a pure input. It is not the number of displayed answer bits, the entropy of all local readout records, or the entanglement consumed to build a probe. The apparatus note explicitly separates these quantities.
 

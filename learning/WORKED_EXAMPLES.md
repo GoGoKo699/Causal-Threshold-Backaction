@@ -1,9 +1,10 @@
 # Worked examples: a certain answer can still disturb the spins
 
-These examples use the [model](../research/MODEL.md) and the
-[window apparatus](../research/APPARATUS.md). All entropies are in bits. They
-explain the physical mechanism; the universal statements are proved in
-[EXACT_PROOFS](../research/EXACT_PROOFS.md).
+These examples use the [model](../science/model.md) and the
+[window apparatus](../science/distributed_apparatus.md). All entropies are in bits.
+They explain the physical mechanism behind the [entropy law](../science/entropy_law.md).
+The universal lower bound is proved in the [causal converse](../science/causal_converse.md),
+and the matching construction is bounded in [window entropy](../science/window_entropy.md).
 
 ## 1. Four spins, a two-unit threshold gap
 
@@ -70,8 +71,8 @@ therefore fails the nonsignalling requirement on the retained spins.
 A causal instrument must already remove the relevant active coherence in the
 first background. This is why calibration elsewhere in the Hilbert space
 constrains disturbance on an input whose own answer is certain. The argument
-uses preservation of sector states as well as calibration; the general proof
-spells out both ingredients.
+uses preservation of sector states as well as calibration; the
+[causal comparison proof](../science/causal_converse.md) spells out both ingredients.
 
 ## 3. Fine readout, binary readout, and entropy
 
@@ -96,7 +97,7 @@ Three entropies therefore describe different things:
 
 Position measurement can increase the pointer's entropy. The system entropy
 is not obtained by simply counting fine outcomes or substituting H(s).
-The [Fourier entropy proof](../research/EXACT_PROOFS.md) quantifies how much coherence
+The [Fourier entropy proof](../science/window_entropy.md) quantifies how much coherence
 the translated windows retain.
 
 ## 4. Product fluctuations and the scale of the gap
@@ -109,10 +110,12 @@ distinguishable coarse-charge possibilities. The optimal entropy cost is
 \log_2\!\left(1+\frac{\sqrt m}{g}\right)+O(1),
 ```
 
-where the error is an additive constant independent of m and g. When the gap
-is much wider than the fluctuations, a separate common-core argument proves
-that the explicit apparatus's entropy tends to zero. An additive constant
-bound alone would not establish that limit.
+where the error is an additive constant independent of m and g. The
+[product-corollary proof](../science/fluctuation_regimes.md) gives the finite bounds.
+When the gap is much wider than the fluctuations, the separate common-core
+and concentration arguments in that document prove that the explicit
+apparatus's entropy tends to zero. An additive constant bound alone would not
+establish that limit.
 
 ![Threshold calibration and entropy of the window apparatus](../assets/threshold_entropy.svg)
 
@@ -123,7 +126,7 @@ the low region. The green curve is the explicit window entropy. The shaded
 interval uses the analytic product lower bound and variance upper bound; it is
 not a numerical optimization over instruments. The orange line marks g=√m.
 The nonzero limiting value of the displayed variance bound does not contradict
-the separately proved vanishing limit. [Reproduction](../VERIFICATION.md).
+the separately proved vanishing limit. [Reproduction](../verification/README.md).
 
 ## 5. Two exact boundaries
 
@@ -144,7 +147,8 @@ h_2\!\left(\frac1{2g}\right)\longrightarrow0.
 
 For example, a=g, m=g, and N=2g provide valid ambient parameters. This case
 explains why a universal assertion of exact equality to the chosen coarse-bin
-entropy would be false.
+entropy would be false. These boundaries are stated in the
+[entropy law](../science/entropy_law.md).
 
 ## 6. Why the assumptions matter
 
@@ -163,10 +167,11 @@ entropy. The theorem's entropy cost refers to initially pure coherent inputs.
 $`P=\bigotimes_j Z_j`$ has the causal nonselective channel
 $`\rho\mapsto(\rho+P\rho P)/2`$. On a pure input its output rank is at most two
 and its entropy is at most one bit. Thus binary nonlocality alone does not force
-the threshold law. Ordered charge calibration is part of the mechanism.
+the threshold law. Ordered charge calibration is part of the mechanism; the
+[interpretation](../science/interpretation.md) develops this comparison.
 
 **Robust preparation phases.** With exact sector preservation, common input
 phases do not change the output entropy. For general imperfect preservation,
 the robust theorem uses an average over a specified phase family. Keep the
 phase index: averaging output entropies is different from forgetting which
-pure input was prepared. See [ROBUSTNESS](../research/ROBUSTNESS.md).
+pure input was prepared. See [robustness](../science/robustness.md).
