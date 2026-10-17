@@ -1,6 +1,6 @@
 # Causal Threshold Backaction
 
-**A certain binary answer can require a growing entropy cost in the retained spins.**
+**How much entropy must a causal threshold measurement create, even when its binary answer is certain?**
 
 A detector measures whether the total occupation of N separated spins is below
 or above a threshold. It must preserve every state within each definite-charge
@@ -15,13 +15,24 @@ attains this accuracy for every charge distribution. For a pure product input,
 the resulting scale is $`\log_2(1+\sqrt m/g)`$, where m is the number of active
 spins and g is the threshold's charge gap.
 
-| Read next | Purpose |
+## Read the science
+
+Start with the [model and scope](science/model.md) and the
+[exact entropy law](science/entropy_law.md). The causal converse and window
+construction establish the two sides of the optimum; the fluctuation and
+robustness arguments explain its limiting regimes and error assumptions.
+The [physical interpretation](science/interpretation.md) connects these results.
+
+| To understand | Read |
 |---|---|
-| [Learning route](docs/LEARNING.md) · [30 milestones](docs/MILESTONES.md) · [Worked examples](docs/WORKED_EXAMPLES.md) | Start from one educational anchor and connect the physical task to the result. |
-| [Model](research/MODEL.md) · [Theorem](research/THEOREM.md) · [Proof map](research/PROOF_MAP.md) | Read the exact assumptions, finite constants, and complete proofs. |
-| [Distributed apparatus](research/APPARATUS.md) · [Robustness](research/ROBUSTNESS.md) | Inspect the full instrument and the bounds with imperfect preservation or calibration. |
-| [Attribution](literature/ATTRIBUTION.md) · [Bibliography](references.bib) | Locate the inherited frameworks, close antecedents, and task-specific results. |
-| [Verification](VERIFICATION.md) · [LLM guide](llms.txt) | Reproduce finite calculations and find authoritative statements. |
+| How causality constrains charge coherence | [Causal converse](science/causal_converse.md) |
+| Why one translated window nearly minimizes entropy | [Window entropy bound](science/window_entropy.md) |
+| How separated sites implement the full instrument | [Distributed apparatus](science/distributed_apparatus.md) |
+| The product-state law and the separate vanishing limit | [Fluctuation regimes](science/fluctuation_regimes.md) |
+| General instruments, preparation phases, and approximate causality | [Robustness](science/robustness.md) |
+| Exact proof dependencies and the physical meaning of the results | [Proof map](science/proof_map.md) and [interpretation](science/interpretation.md) |
+| Established ingredients and close antecedents | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
+| Finite checks and self-directed study | [Verification](verification/README.md), [Watrous bridge](learning/WATROUS_BRIDGE.md), and [30 milestones](learning/MILESTONES.md) |
 
 ## The task and its domain
 
@@ -37,7 +48,7 @@ $`q\ge a+g`$. The intervening g−1 sectors are unconstrained. Exact preservatio
 means preserving **every state inside every global charge sector**, including
 internal coherences. Causality of the retained-system channel is needed in
 only one direction, from the N−m background spins to the m active spins.
-The [model](research/MODEL.md) gives the full channel condition.
+The [model](science/model.md) gives the full channel condition.
 
 Prepare a pure state
 
@@ -67,11 +78,12 @@ at the fixed ambient parameters. Then
 \quad}
 ```
 
-The [theorem](research/THEOREM.md) gives the sharper upper correction
+The [theorem](science/entropy_law.md) gives the sharper upper correction
 $`\log_2(2-1/g)+C_g<2.219898`$, with
 $`C_g=2(1+\ln g-\sum_{j=1}^{g}1/j)/\ln2`$. One and the same window apparatus
 satisfies the upper bound for every p and every choice of the internal sector
-states. At g=1 the cost is exactly H(Q). The correction near a bin boundary is
+states. At g=1 the cost is exactly H(Q) for this active-input family with vacuum
+background spins. The correction near a bin boundary is
 necessary: coarse-bin entropy is not an exact equality in general.
 
 The converse follows from a physical comparison. Changing the background can
@@ -79,7 +91,7 @@ move two active charges separated by at least g onto opposite sides of the
 calibrated threshold. Their meter states must become distinguishable.
 Nonsignalling forces the same loss of active coherence in the original
 background. Grouping these constraints by bin parity gives the entropy lower
-bound. [Complete derivation](research/EXACT_PROOFS.md).
+bound. [Complete causal converse](science/causal_converse.md).
 
 ## Product states already exhibit the cost
 
@@ -99,15 +111,15 @@ the same feasible ambient parameters,
 | $`g`$ comparable to $`\sqrt m`$ | The cost stays bounded. |
 | $`g\gg\sqrt m`$ | A separate common-core estimate proves that the window entropy, and hence the optimum, tends to zero. |
 
-The large-gap statement uses an additional proof; the additive constants alone
-do not imply a vanishing limit.
+The large-gap statement uses the [common-core and concentration proof](science/fluctuation_regimes.md);
+the additive constants alone do not imply a vanishing limit.
 
 ![Binary threshold calibration and product-state entropy](assets/threshold_entropy.svg)
 
 The green curve evaluates the explicit apparatus; the shaded interval gives
 analytic bounds on the optimum. Panel B has m=a=64, N=192, and 1≤g≤128, so
 every point obeys the theorem's domain. The caption and physical explanation
-are in [worked examples](docs/WORKED_EXAMPLES.md).
+are in [worked examples](learning/WORKED_EXAMPLES.md).
 
 ## An exact distributed apparatus
 
@@ -117,7 +129,7 @@ Classical addition of the local records in their common future gives the
 fine outcome $`s=q+Z`$, with Z uniform on 0,…,g−1. Group these outcomes into
 low and high.
 
-The [apparatus proof](research/APPARATUS.md) derives the complete Kraus
+The [apparatus proof](science/distributed_apparatus.md) derives the complete Kraus
 instrument, its conditional states, and the coherence kernel
 
 ```math
@@ -132,7 +144,7 @@ the finer information responsible for the retained-system entropy.
 
 ## Robustness and scope
 
-The [robust theorem](research/ROBUSTNESS.md) permits general instruments with
+The [robust theorem](science/robustness.md) permits general instruments with
 calibration error η and survival loss ε. It proves entropy lower bounds
 averaged over a specified family of coherent preparation phases, without an
 ambient $`2^N`$ continuity penalty. With exact readout and exact nonsignalling,
@@ -154,15 +166,35 @@ is not asserted unchanged under errors.
 The result depends on ordered threshold calibration, sector preservation,
 and pure input. A parity measurement can have at most one bit of pure-input
 output entropy, and a charge-diagonal mixed input need not acquire any new
-entropy. The [examples](docs/WORKED_EXAMPLES.md) explain these boundaries.
+entropy. The [examples](learning/WORKED_EXAMPLES.md) explain these boundaries.
 
 Causal measurement frameworks, translated noisy meters, GHZ-like distributed
 probes, and the square-root fluctuation scale have close established
 antecedents. The contribution here is the universal entropy converse together
 with a quantitatively matching instrument under the stated assumptions.
-[Attribution and primary-source comparisons](literature/ATTRIBUTION.md).
+[Attribution and primary-source comparisons](references/RELATED_WORK.md).
 
-## Reproduce and learn
+## Learn the project
+
+The single educational anchor is **John Watrous, *The Theory of Quantum
+Information* (2018)**. The [Watrous bridge](learning/WATROUS_BRIDGE.md) selects
+the relevant chapters, translates the notation, and explains the steps from
+states and channels to the causal entropy bound. The
+[worked examples](learning/WORKED_EXAMPLES.md) follow a four-spin experiment,
+its records, and the boundaries of the theorem.
+
+The [30-milestone map](learning/MILESTONES.md) gives a common route through the
+whole project. Its **14 background/preliminaries milestones** assemble the
+measurement model and information tools; its **16 narrative/innovation
+milestones** connect the causal mechanism, attaining apparatus, robust bounds,
+and physical interpretation. Each milestone identifies a question, an
+understanding target, dependencies, a conceptual connection, and source pointers.
+
+Use the bridge alongside the milestones for self-directed study.
+The [LLM reading guide](llms.txt) maps scientific questions and reader intentions
+to the authoritative files. Specialists can follow the direct science route above.
+
+## Reproduce the finite checks
 
 ```sh
 python -m pip install -r requirements.txt
@@ -173,19 +205,12 @@ python tools/check_repository.py
 
 The checks evaluate finite matrices and exact instrument identities. The
 universal results rest on the analytical proofs. Figure regeneration and
-reference values are documented in [VERIFICATION](VERIFICATION.md).
-
-The educational anchor is [John Watrous, *The Theory of Quantum Information*](https://cs.uwaterloo.ca/~watrous/TQI/).
-The [learning route](docs/LEARNING.md) selects the relevant material and supplies
-the project-specific bridge. The [30 milestones](docs/MILESTONES.md) and
-[coaching protocol](docs/COACHING.md) support self-directed study without
-replacing the specialist proof route.
+reference values are documented in [verification](verification/README.md).
 
 ## Purpose and contact
 
 This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
-The [LLM guide](llms.txt) maps questions to authoritative files.
 See [CONTRIBUTING](CONTRIBUTING.md) for scientific and implementation changes.
 The owner's original [MIT license](LICENSE) is preserved. Linked third-party
 papers and the textbook are not redistributed or relicensed here.

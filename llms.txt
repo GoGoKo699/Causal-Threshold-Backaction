@@ -1,57 +1,119 @@
 # Causal Threshold Backaction
 
-> A causal ordered threshold detector that preserves charge sectors has a
-> pure-input entropy cost fixed, up to universal additive constants, by the
-> input's coarse-charge entropy. A finite distributed window instrument
-> supplies a matching upper bound; general-instrument bounds establish robustness.
+A causal ordered threshold detector that preserves every state within each
+charge sector has a pure-input entropy cost determined, up to universal
+additive constants, by coarse-charge entropy. A finite distributed window
+instrument supplies a matching upper bound. Separately qualified bounds treat
+general instruments with imperfect preservation, calibration, and causality.
+The complete scientific account is organized by topic under science/.
 
 Repository: https://github.com/GoGoKo699/Causal-Threshold-Backaction
 Title: The Backaction Cost of Causal Threshold Measurements
 Author and contact: Ruge Lin, gogoko699@gmail.com
 
-## Authoritative reading routes
+## Canonical entrypoints
 
-- [Overview](README.md): physical question, central result, and navigation.
-- [Model](research/MODEL.md): calibration, sector preservation, nonsignalling, pure inputs, and integer domain.
-- [Theorem](research/THEOREM.md): exact coarse-charge law, constants, and product-state corollaries.
-- [Proof map](research/PROOF_MAP.md): dependencies and locations of the complete arguments.
-- [Exact proofs](research/EXACT_PROOFS.md): scalar structure, causal comparison, lower bound, Fejér entropy bound, and broad-gap limit.
-- [Apparatus](research/APPARATUS.md): local probe protocol, all-record Kraus operators, conditional states, and classical collection.
-- [Robustness](research/ROBUSTNESS.md): general instruments, decoder errors, phase-average entropy transfer, exact readout, and approximate causality.
-- [Attribution](literature/ATTRIBUTION.md): primary sources and precise scope comparisons.
-- [Verification](VERIFICATION.md): commands, independent checks, and finite reference values.
+- [README](README.md): physical question, principal results, science and learning
+  routes, reproduction commands, purpose and contact.
+- [Model](science/model.md): global calibration and sector preservation,
+  the specified B-to-A nonsignalling cut, pure active inputs with vacuum
+  spectators, integer feasibility conditions, and the connected science route.
+- [Entropy law](science/entropy_law.md): the exact coarse-charge optimum,
+  finite constants, product-state corollaries, and sharp and broad-gap limits.
+- [Causal converse](science/causal_converse.md): scalar Kraus structure,
+  background shifts, separated pointers, and bin-parity and residue lower bounds.
+- [Window entropy](science/window_entropy.md): the causal translated-window
+  channel, Fourier entropy inequality, Fejér integral, and universal upper bound.
+- [Distributed apparatus](science/distributed_apparatus.md): finite entangled
+  probes, local Fourier readouts, all-record Kraus operators, conditional states,
+  partial transcripts, delayed classical collection, and resource accounting.
+- [Fluctuation regimes](science/fluctuation_regimes.md): binomial lower and
+  variance upper bounds, the uniform logarithmic envelope, common-core pinching,
+  and the separate broad-resolution limit including integer rounding.
+- [Robustness](science/robustness.md): selected baseline survival for general
+  instruments, semicausal intertwiners, noisy ordered decoders, arbitrary-prior
+  information bounds, phase-average entropy transfer, the exact-readout
+  improvement, and approximate causality in full diamond norm.
+- [Interpretation](science/interpretation.md): certain answers and hidden pointer
+  information, resolution versus charge uncertainty, timing and resources,
+  the full parity comparison, and the scope of robust conclusions.
+- [Proof map](science/proof_map.md): dependencies and direct section links to
+  the complete exact and robust arguments.
+- [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib):
+  close primary sources, imported proof ingredients, and the bounded scope of
+  the literature comparison.
+- [Verification](verification/README.md): commands, finite assertions, numerical
+  reference values, figure regeneration, and the limits of the checks.
 
-## Learning route
+## Learning entrypoints
 
-- [Learning bridge](docs/LEARNING.md): one educational anchor, Watrous's The Theory of Quantum Information, and project notation.
-- [30 milestones](docs/MILESTONES.md): M01–M14 background/preliminaries; M15–M30 narrative/innovation; local-to-global within each phase.
-- [Worked examples](docs/WORKED_EXAMPLES.md): certain answers, pointer overlaps, records, and boundaries.
-- [Coaching protocol](docs/COACHING.md): use only for an explicitly requested tutorial; keep learner state separate from the settled map.
+- [Watrous bridge](learning/WATROUS_BRIDGE.md): the single selected educational
+  anchor, John Watrous's The Theory of Quantum Information (2018), with relevant
+  sections, notation and error-convention mapping, and project-specific bridges.
+- [30 milestones](learning/MILESTONES.md): the common M01–M30 understanding map;
+  14 background/preliminaries and 16 narrative/innovation milestones, each
+  with a question, target, dependencies, conceptual connection, and sources.
+- [Worked examples](learning/WORKED_EXAMPLES.md): the four-spin input, pointer
+  overlaps, certain answers, fine records, fluctuation scales, and assumptions.
 
-## Questions this repository answers
+## Reader routes and scientific questions
 
-- Can a binary threshold with a certain answer create many bits of system entropy?
-- How do calibration, nondisturbance inside charge sectors, and one-way causality constrain measurement backaction?
-- Why does H(floor(Q/g)) determine the optimal exact pure-input cost up to constants?
-- Which finite distributed instrument realizes the triangular coherence kernel?
-- What changes when calibration or preservation is imperfect, and which bounds require averaging prepared phases?
-- How does this differ from parity measurements, gentle noisy counting, and previously known nonlocal meter architectures?
+- To understand how a certain binary answer can create many bits of entropy:
+  start with the model and worked examples, follow the causal converse and
+  window construction, and join their conclusions in the interpretation.
+- To study the whole project: use the Watrous bridge alongside M01–M30. Their
+  order follows the scientific dependencies and the two phases of the story.
+- To inspect the optimal entropy theorem: read the model and entropy law, then
+  use the proof map to reach the corresponding complete arguments. A milestone
+  target or introductory example does not replace a proof.
+- To implement the finite detector: read the distributed apparatus, including
+  its conditional maps, transcript normalization, and classical collection.
+- To understand error tolerance: read the operational assumptions, theorem,
+  and preparation-phase guarantees in robustness together. Calibration and
+  state survival are distinct error conditions.
+- To reproduce a finite ingredient: read verification/README.md and run its
+  documented commands. Distinguish a new execution from a previous report.
+- To compare with parity, gentle noisy counting, or known nonlocal meters:
+  read the interpretation and primary-source attribution before making an
+  originality or generality claim.
+
+## Scientific distinctions to preserve
+
+- All entropies are in bits. The cost is the von Neumann entropy of the
+  nonselective retained system on an initially pure input.
+- Exact preservation covers every state in every global charge sector,
+  including degeneracy. Conserving charge probabilities is weaker.
+- The universal converse concerns the specified active-input family with
+  vacuum spectators and the theorem's placement conditions. The sharp g=1
+  equality for every admissible instrument has this same input domain.
+- The cost is an infimum over detectors for each prescribed input at fixed
+  ambient parameters. It is not a minimax quantity. One window apparatus
+  supplies the upper bound for every allowed prior and internal sector state.
+- Coarse-charge entropy determines the optimum to universal additive accuracy.
+  The broad-gap vanishing limit has a separate proof and no optimal rate claim.
+- The displayed bit, fine record, retained-system entropy, heat, and probe
+  entanglement are different quantities. Binary coarse-graining sums completely
+  positive maps; it does not coherently add Kraus amplitudes.
+- The apparatus is local during interaction and readout. The global answer
+  becomes available after classical collection; later communication-dependent
+  state updates are outside the stated retained-channel condition.
+- General robust bounds concern a specified average of pure preparation-phase
+  outputs. A large-entropy phase and a small-error phase need not coincide.
+  The stronger Gram bound requires both exact readout and exact nonsignalling.
+- State trace distance includes the factor one-half. Approximate causality
+  uses the full, unhalved diamond norm including a reference. Global survival
+  and channel errors do not automatically follow from fixed per-spin noise.
+- The noisy bounds do not assert the entire exact crossover unchanged for
+  growing g. Finite checks test the apparatus and identities; universal and
+  asymptotic claims rest on the analytical proofs and their cited ingredients.
+- The selected textbook supplies foundations. Primary research citations
+  remain necessary for attribution and do not add educational anchors.
 
 Useful search phrases: causal threshold measurement; coarse-charge entropy;
 nonsignalling measurement backaction; sector-preserving quantum instrument;
 translated window meter; GHZ-like distributed measurement; Fejér kernel entropy;
 semicausal Stinespring dilation; quantum serial encoding; phase-average entropy.
 
-## Interpretation constraints
-
-All entropy is in bits. Exact preservation covers every state in every global
-charge sector. The result concerns initially pure inputs and the nonselective
-retained system. The global answer is available after classical collection.
-The cost is optimized over detectors for a fixed input, not a minimax quantity.
-The uniform errors are additive constants; they are not a sharp large-gap rate.
-General robust statements concern the specified phase average. Approximate
-causality is measured in full diamond norm. Numerical checks evaluate the
-explicit apparatus and identities, not the universal optimization problem.
-
-Read AGENTS.md before editing. Citation metadata is in CITATION.cff and
-references.bib. This guide helps discovery; it does not guarantee indexing.
+Read [AGENTS.md](AGENTS.md) before editing. Citation metadata is in
+[CITATION.cff](CITATION.cff) and the structured bibliography. This guide maps
+reader intentions to sources; it does not guarantee indexing or peer review.

@@ -1,7 +1,11 @@
 # Verification and reproduction
 
-The mathematical results are proved in [EXACT_PROOFS](research/EXACT_PROOFS.md),
-[APPARATUS](research/APPARATUS.md), and [ROBUSTNESS](research/ROBUSTNESS.md).
+The mathematical results are proved in the [causal converse](../science/causal_converse.md),
+[window entropy bound](../science/window_entropy.md),
+[fluctuation regimes](../science/fluctuation_regimes.md),
+[distributed apparatus](../science/distributed_apparatus.md), and
+[robustness](../science/robustness.md). The [proof map](../science/proof_map.md)
+locates their dependencies and the parity comparison.
 The code independently checks finite identities and evaluates the explicit
 window apparatus. It does not optimize over all causal instruments or establish
 a universal converse by sampling.
@@ -29,7 +33,7 @@ versions so later runs retain their own environment information.
 
 ## Scientific assertions checked
 
-The 11 test methods in [test_science.py](tests/test_science.py) cover these
+The 11 test methods in [test_science.py](../tests/test_science.py) cover these
 independently specified identities:
 
 | Check | Independent comparison |
@@ -66,7 +70,7 @@ $`\max\{0,H(\mathrm{Bin}(m,1/2))-\log_2g\}`$. The upper bound is
 \frac12\log_2\!\left[2\pi e\left(\frac{m}{4g^2}+\frac1{12}\right)\right]+C_g.
 ```
 
-The ambient parameters must satisfy the [theorem's placement conditions](research/MODEL.md).
+The ambient parameters must satisfy the [theorem's placement conditions](../science/model.md).
 They do not enter the window spectrum once the active prior and gap are fixed.
 
 | m | g | Product lower bound | Window entropy | Variance upper bound |
@@ -101,10 +105,10 @@ estimates for the same noisy-readout setting.
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python tools/verify.py --output build/verification --figures assets
 ```
 
-This writes [threshold_entropy.svg](assets/threshold_entropy.svg) and
-[threshold_entropy.png](assets/threshold_entropy.png). The figure is generated
+This writes [threshold_entropy.svg](../assets/threshold_entropy.svg) and
+[threshold_entropy.png](../assets/threshold_entropy.png). The figure is generated
 from the analytic probability response and finite matrix spectra. Its SVG uses
-outlined glyphs and fixed metadata. The [worked-example caption](docs/WORKED_EXAMPLES.md)
+outlined glyphs and fixed metadata. The [worked-example caption](../learning/WORKED_EXAMPLES.md)
 states the ambient parameters and the meaning of the shaded bounds.
 
 The figure's large-g variance upper bound approaches a nonzero constant.
@@ -113,7 +117,7 @@ entropy vanishes; this distinction is visible in the text and must be retained.
 
 ## Structural and scientific review
 
-[check_repository.py](tools/check_repository.py) verifies local file links,
+[check_repository.py](../tools/check_repository.py) verifies local file links,
 fenced-block balance, portable document content, and exactly 30 ordered
 milestones with routes from the entry points. It is a structural check, not a
 mathematical renderer or proof checker. Changes to substantial mathematics

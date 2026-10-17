@@ -2,7 +2,7 @@
 
 This repository contains the scientific exposition and finite verification for
 *The Backaction Cost of Causal Threshold Measurements*. Begin with README.md,
-research/MODEL.md, research/THEOREM.md, and research/PROOF_MAP.md. Current user
+science/model.md, science/entropy_law.md, and science/proof_map.md. Current user
 instructions determine the authorized work and merge scope.
 
 ## Scientific invariants
@@ -19,14 +19,20 @@ instructions determine the authorized work and merge scope.
 
 ## Sources and presentation
 
-The canonical exact argument is research/EXACT_PROOFS.md; the full instrument is
-research/APPARATUS.md; general-instrument errors are in research/ROBUSTNESS.md.
-Keep literature/ATTRIBUTION.md and references.bib aligned with the claims.
+The canonical exact arguments are science/causal_converse.md,
+science/window_entropy.md, and science/fluctuation_regimes.md. The full
+instrument is science/distributed_apparatus.md; general-instrument errors are
+in science/robustness.md. science/interpretation.md connects their physical
+meaning and gives the parity comparison. Keep references/RELATED_WORK.md and
+references/references.bib aligned with the claims.
 Credit inherited causal measurement frameworks, noisy translated meters, GHZ-like
 apparatus designs, fluctuation scales, and imported information inequalities.
 
-Write the repository as a complete bounded scientific work. Keep research
-claims, tutorial explanations, and reproducibility evidence easy to navigate.
+Write the repository as a complete bounded scientific work. Keep one
+authoritative home for each result in the topic-based science/ account, with
+connected introductions, proof dependencies, and physical interpretation.
+Keep learning/, references/, and verification/ easy to navigate from README.md
+and llms.txt. Retain useful implementation structure and reproduction commands.
 Use GitHub-supported mathematical syntax: inline $`...`$ and fenced math blocks.
 Write named operators with supported roman notation such as `\mathrm{Tr}\,` and `\mathrm{Var}`.
 Use `\lt` for strict less-than comparisons in fenced math; literal `<` can
@@ -41,14 +47,13 @@ paragraph unless the owner requests a change.
 
 ## Learning
 
-docs/MILESTONES.md is the settled, project-intrinsic map of exactly M01–M30.
-docs/LEARNING.md uses one educational anchor, Watrous's *The Theory of Quantum
-Information*. docs/WORKED_EXAMPLES.md bridges to the theorem. Follow
-docs/COACHING.md when an interactive tutorial is requested: Revise → Learn → Test,
-four-option questions, initial two-question challenge, 1–3 learning rounds after
-failure, all-correct retries increasing to at most six. Only challenge failures
-increase the next challenge size. Keep learner attempts separate from this map;
-routine repository work does not launch coaching or confer passes.
+learning/MILESTONES.md is the settled, project-intrinsic map of exactly M01–M30:
+14 background/preliminaries milestones and 16 narrative/innovation milestones.
+Preserve its questions, targets, dependencies, conceptual connections, and
+scientific source pointers. learning/WATROUS_BRIDGE.md uses one educational
+anchor, Watrous's *The Theory of Quantum Information*.
+learning/WORKED_EXAMPLES.md bridges the physical task to the theorem.
+Personal teaching procedures and learner records belong outside this repository.
 
 ## Validation and repository scope
 
@@ -61,7 +66,7 @@ python tools/check_repository.py
 ```
 
 For figure changes, add `--figures assets` to the verification command and
-inspect the generated image. See VERIFICATION.md for the assertion coverage and
+inspect the generated image. See verification/README.md for the assertion coverage and
 limits. Record only checks actually performed.
 
 Work on a branch, inspect the actual diff, resolve scientific and validation
