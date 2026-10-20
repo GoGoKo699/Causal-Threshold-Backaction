@@ -8,6 +8,55 @@ The [entropy law](entropy_law.md) identifies its necessary size, and the
 [distributed apparatus](distributed_apparatus.md) realizes the bound within a
 constant number of bits.
 
+## Why this detector model
+
+We study a reusable collective-charge decision device. It must return the
+correct ordered answer outside a finite promise gap across all calibrated
+input sectors. The gap allows an unresolved transition region; the exact
+requirements apply on either side. Even when the input used to assess
+backaction is known to be below threshold, the detector must retain its
+specified performance on other inputs. These are the
+[calibration requirements](model.md#exact-calibration-and-transition-width)
+of the task.
+
+A total-charge eigenspace can also carry quantum information in superpositions
+of different excitation arrangements. A useful design goal for a collective
+readout is to retain that information. We therefore require every state inside
+each fixed-charge sector to be preserved. This is a substantive nondisturbance
+requirement, stronger than preserving charge populations or ensuring that a
+repeated charge measurement gives the same value; it is not automatic for a
+generic detector. For example, measuring both local occupations and discarding
+the outcomes gives
+
+```math
+|\xi\rangle=\frac{|01\rangle+|10\rangle}{\sqrt2},
+\qquad
+|\xi\rangle\langle\xi|
+\longmapsto
+\frac12\left(|01\rangle\langle01|+|10\rangle\langle10|\right).
+```
+
+The total charge remains one, but its internal coherence is lost. This is an
+illustration of the [preservation requirement](model.md#exact-preservation-within-charge-sectors),
+not an entropy-law witness in the theorem's restricted input family.
+
+The sites are separated during the quantum interaction stage. This motivates
+the necessary [nonsignalling condition](model.md#the-cut-and-the-nonsignalling-condition)
+on the retained-system channel: changing the spectator input cannot change the
+active output marginal before communication. Entangled probes may be shared in
+advance, and classical records may be collected afterward to obtain the global
+answer. The lower bound imposes this channel condition; it does not assume that
+every nonsignalling channel admits a local implementation. That distinction is
+part of the established causal-measurement framework described in
+[Beckman et al. and the related-work discussion](../references/RELATED_WORK.md).
+
+The requirements are jointly realizable: the
+[finite window apparatus](distributed_apparatus.md) preserves every charge
+sector, has the promised threshold response, and uses local interactions and
+readouts with subsequent classical collection. It supplies an exact
+implementation in the stated model. The separate [robustness bounds](robustness.md)
+specify what follows under their own imperfect-operation assumptions.
+
 ## A certain answer is compatible with growing backaction
 
 The [model](model.md) fixes a detector on all $`N`$ spins. It must answer low on

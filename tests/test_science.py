@@ -3,6 +3,7 @@
 import itertools
 import math
 import unittest
+import warnings
 
 import numpy as np
 
@@ -12,6 +13,15 @@ from causal_threshold.core import (
     product_entropy_bounds, robust_coefficients, variance_upper,
     window_entropy, window_gram,
 )
+
+
+class InputDomainTests(unittest.TestCase):
+    def test_complex_priors_are_rejected_before_float_conversion(self):
+        p = np.array([0.5 + 1j, 0.5 - 1j])
+        with warnings.catch_warnings():
+            warnings.simplefilter("error")
+            with self.assertRaisesRegex(ValueError, "real"):
+                entropy(p)
 
 
 class WindowEntropyTests(unittest.TestCase):

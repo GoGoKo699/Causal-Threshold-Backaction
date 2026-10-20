@@ -33,8 +33,8 @@ versions so later runs retain their own environment information.
 
 ## Scientific assertions checked
 
-The 11 test methods in [test_science.py](../tests/test_science.py) cover these
-independently specified identities:
+The 12 test methods in [test_science.py](../tests/test_science.py) include
+11 scientific checks of the identities below and one input-domain regression:
 
 | Check | Independent comparison |
 |---|---|
@@ -60,6 +60,9 @@ The general-prior checks use fixed random seeds, including sharply concentrated
 and broadly spread priors. Spectral comparisons use a tolerance that accommodates
 floating-point roundoff; a materially negative eigenvalue is an error, not
 silently interpreted as a probability.
+
+The input-domain regression checks that a complex NumPy prior is rejected
+before conversion to real floating-point values.
 
 ## Reference entropy values
 

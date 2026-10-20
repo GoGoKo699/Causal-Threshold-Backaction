@@ -31,6 +31,8 @@ def positive_integer(value: int, name: str = "value") -> int:
 
 
 def probabilities(p: Sequence[float]) -> np.ndarray:
+    if np.iscomplexobj(p):
+        raise ValueError("probabilities must be real")
     result = np.asarray(p, dtype=float)
     if result.ndim != 1 or result.size == 0:
         raise ValueError("a nonempty one-dimensional prior is required")

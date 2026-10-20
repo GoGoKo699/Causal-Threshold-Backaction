@@ -9,6 +9,12 @@ block signal to an active block. Even when a pure input is certain to produce
 the low answer, these requirements force the apparatus to distinguish enough
 charge information to create entropy in the retained spins.
 
+The detector is designed to learn about collective charge while preserving
+quantum information within each fixed-charge sector for later use. The
+[physical motivation](science/interpretation.md#why-this-detector-model) explains
+this preservation requirement, the finite calibration gap, and why the
+classical answer can be collected after the separated interactions.
+
 The central result identifies the **optimal entropy cost with coarse-charge
 entropy, up to universal additive constants**. A finite distributed apparatus
 attains this accuracy for every charge distribution. For a pure product input,
