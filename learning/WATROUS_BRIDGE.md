@@ -73,6 +73,25 @@ objects under that change of notation.
 
 ## The bridge from textbook objects to the theorem
 
+The [model](../science/model.md) partitions $`N`$ spins into an active block
+$`A`$ of $`m`$ spins and a spectator block $`B`$ of $`N-m`$ spins. In the input
+below, $`|0\rangle_B`$ denotes the joint vacuum of all spectator spins.
+Here $`p_q`$ is the active-charge probability for $`0\le q\le m`$, and
+$`|a_q\rangle_A`$ is a normalized state of active charge $`q`$; relative phases
+may be included in these vectors.
+
+The integer parameters obey $`g\ge1`$, $`0\le a`$, $`a+g\le N`$, and
+$`0\le m\le\min(a,N-a)`$. Calibration applies to every state in a global
+total-charge sector: low for total charge at most $`a`$ and high for total
+charge at least $`a+g`$. The active charge $`q`$ equals the total charge for
+the vacuum-spectator input below. The placement conditions put this whole
+input family in the low region and ensure that the spectator charge shifts
+used in the converse are available.
+
+This [collective-charge readout model](../science/interpretation.md#why-this-detector-model)
+protects quantum information inside each degenerate sector while allowing
+information about charge to enter the meter.
+
 For a definite charge state, exact preservation makes each Kraus operator act
 as a scalar. A dilation can therefore attach a pointer without changing that
 state. On a pure superposition of charges it acts as

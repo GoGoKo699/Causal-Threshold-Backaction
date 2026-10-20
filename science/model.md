@@ -13,7 +13,9 @@ derives the full instrument at separated sites. [Fluctuation regimes](fluctuatio
 specializes the law to product inputs and proves the broad-resolution limit.
 [Robustness](robustness.md) treats general imperfect instruments under its stated
 operational assumptions. The [physical interpretation](interpretation.md) joins
-these conclusions and explains the parity comparison.
+these conclusions and explains the parity comparison. Its
+[detector motivation](interpretation.md#why-this-detector-model) connects the
+preservation requirement and the timing of readout to the intended measurement.
 
 Use the [proof map](proof_map.md) for individual argument dependencies and the
 [Watrous bridge](../learning/WATROUS_BRIDGE.md) for the conceptual route into them.

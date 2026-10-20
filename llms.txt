@@ -34,9 +34,11 @@ Author and contact: Ruge Lin, gogoko699@gmail.com
   instruments, semicausal intertwiners, noisy ordered decoders, arbitrary-prior
   information bounds, phase-average entropy transfer, the exact-readout
   improvement, and approximate causality in full diamond norm.
-- [Interpretation](science/interpretation.md): certain answers and hidden pointer
-  information, resolution versus charge uncertainty, timing and resources,
-  the full parity comparison, and the scope of robust conclusions.
+- [Interpretation](science/interpretation.md): the physical rationale for the
+  detector assumptions, preservation of within-sector quantum information,
+  certain answers and hidden pointer information, resolution versus charge
+  uncertainty, timing and resources, the full parity comparison, and the scope
+  of robust conclusions.
 - [Proof map](science/proof_map.md): dependencies and direct section links to
   the complete exact and robust arguments.
 - [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib):
@@ -58,6 +60,10 @@ Author and contact: Ruge Lin, gogoko699@gmail.com
 
 ## Reader routes and scientific questions
 
+- To understand why the detector assumptions are useful: read
+  [the detector motivation](science/interpretation.md#why-this-detector-model),
+  then the exact definitions in the model. The two-spin example distinguishes
+  preserving charge from preserving quantum information within a charge sector.
 - To understand how a certain binary answer can create many bits of entropy:
   start with the model and worked examples, follow the causal converse and
   window construction, and join their conclusions in the interpretation.
