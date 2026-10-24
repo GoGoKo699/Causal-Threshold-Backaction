@@ -126,12 +126,29 @@ milestones with routes from the entry points. It is a structural check, not a
 mathematical renderer or proof checker. Changes to substantial mathematics
 also require inspection in GitHub's actual renderer.
 
-The exact theorem and apparatus were checked independently of their initial
-write-up. The robustness review included the arbitrary-prior alphabetic code,
-the cq chain rule, the signs in the split-memory entropy relation, and the
-survival-to-entropy transfer. The broad-resolution proof includes the integer
-case where the naive square-root bin width would fall below one. These reviews
-support the written arguments; they are not a claim of external peer review,
+The scientific revision `3b80ba313eb422dcf610ed00f7300bc43c3b34d8` was reviewed
+on October 24, 2026. No material defect was found in the exact converse,
+window entropy bounds, distributed instrument, or general-instrument robustness
+proofs. The review included integer placement and broad-resolution rounding,
+the arbitrary-prior alphabetic code, split-memory entropy transfer, full-diamond
+Stinespring continuity, and the distinction between phase averages and fixed
+preparations. Primary-source comparisons and the Watrous section pointers were
+also checked; the literature comparison remains bounded by the inspected sources.
+
+All 12 unit tests and the 10 reference entropy examples passed. Regenerated
+SVG and PNG figures were byte-identical to the committed assets. The structural
+check passed for 17 Markdown files and `llms.txt`, including 276 local links
+(34 with fragments) and the ordered 30-milestone map with its 14/16 phase split.
+
+GitHub's hosted rendering was inspected at that pinned revision for `README.md`,
+`science/entropy_law.md`, `science/distributed_apparatus.md`,
+`science/robustness.md`, `learning/WORKED_EXAMPLES.md`,
+`learning/WATROUS_BRIDGE.md`, and `learning/MILESTONES.md`. Sampled equation,
+matrix, table, and figure displays were readable; the rendered mathematical
+elements on those pages reported no formula errors. This is a representative
+hosted-display check, not a visual inspection of every equation in every file.
+
+These checks support the written arguments; they are not external peer review,
 formal proof-assistant certification, or a literature priority guarantee.
 
 ## Numerical scope
